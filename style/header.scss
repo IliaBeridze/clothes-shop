@@ -5,15 +5,44 @@
   height: 110px;
 
 }
-
-.header-logo {
-  position: relative;
+.burger-menu {
+  background-color: #fcfcfc;
+  border: none;
+  cursor: pointer;
 }
 
+.header-logo {
+  // position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.header-logo-wrap{
+   
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+ 
+}
+
+.header-logo-text {
+  font-size: 40px;
+  font-weight:normal;
+  font-family: Lora;
+  color: #000;
+
+}
+
+.header-logo-label {
+  font-size: 16px;
+  font-family: Lato;
+  font-weight: normal;
+  color: #000;
 
 
-
-
+}
 
 
 
