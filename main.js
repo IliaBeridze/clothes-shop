@@ -1,9 +1,9 @@
 import "./style.scss";
-import "./card.scss";
+
 import Card from "./card";
 
 
-const app = document.querySelector("#app");
+const cards = document.querySelector(".cards");
 
 const mockData = [
   {
@@ -56,12 +56,12 @@ const mockData = [
   },
 ];
 
-console.log(mockData);
+
 
 function renderItems() {
   mockData.forEach((item) => {
     // console.log(item.img);
-    app.innerHTML += Card(item);
+    cards.innerHTML += Card(item);
     
   });
 }
