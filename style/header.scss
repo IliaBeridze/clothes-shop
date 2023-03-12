@@ -3,5 +3,23 @@
   align-items: center;
   justify-content: space-between;
   height: 110px;
-  
+
+}
+
+.header-logo {
+  position: relative;
+}
+
+
+
+
+
+
+
+
+.actions-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
