@@ -1,8 +1,7 @@
 import "./style.scss";
 import "./card.scss";
 import Card from "./card";
-//create card component 1
-//img, category, title, description, price
+
 
 const app = document.querySelector("#app");
 
@@ -21,7 +20,7 @@ const mockData = [
     title: "Stretch Wool Chino Trousers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
-    price: 199,
+    price: 169,
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyWesXONYQaVCjyPORaGhdIgTYfuPM2_DkHQ&usqp=CAU",
@@ -29,7 +28,31 @@ const mockData = [
     title: "Stretch Wool Chino Trousers",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
-    price: 199,
+    price: 179,
+  },
+  {
+    img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-black-blouse-pants-suit-180508191.jpg",
+    category: "Trousers",
+    title: "Stretch Wool Chino Trousers",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
+    price: 119,
+  },
+  {
+    img: "https://t3.ftcdn.net/jpg/03/41/03/46/360_F_341034617_4e96ntzBPpqjGxbUoHEVAp6NrH6KJwbE.jpg",
+    category: "Trousers",
+    title: "Stretch Wool Chino Trousers",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
+    price: 139,
+  },
+  {
+    img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-white-blouse-pants-suit-180511785.jpg",
+    category: "Trousers",
+    title: "Stretch Wool Chino Trousers",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
+    price: 159,
   },
 ];
 

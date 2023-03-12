@@ -1,5 +1,5 @@
 export default function ShopItem(props) {
-  return (`<div class="card">
+  return `<div class="card">
   <img
     class="card-img"
     src="${props.img}"
@@ -14,5 +14,5 @@ export default function ShopItem(props) {
     </div>
     <div class="card-price">${props.price}$</div>
   </div>
-</div>`)
+</div>`;
 }

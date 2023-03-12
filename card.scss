@@ -2,11 +2,15 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+
+  // display: grid;
+  // grid-template-columns: repeat(3,1fr);
 }
+
 .card {
   width: 270px;
   height: 470px;
-  // border: 1px solid black;
+  background-color: #fff;
 
   &-img {
     width: 100%;
@@ -19,33 +23,41 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    gap: 15px;
     padding-left: 16px;
   }
 
   &-category {
     font-size: 14px;
+    opacity: 0.5;
     color: #707070;
+    padding-top: 24px;
   }
 
   &-title {
     font-size: 18px;
+    padding-top: 8px;
     color: #333333;
   }
 
   &-description {
+    padding-top: 12px;
     font-size: 16px;
+    opacity: 0.5;
     color: #919191;
   }
 
   &-price {
+    margin-top: 4px;
     color: #fff;
     background-color: #333333;
+    //
     width: 70px;
     height: 32px;
+    //
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 160px;
+    //
+    margin-left: auto;
   }
 }

@@ -1,1 +1,10 @@
-@import 'reset-css';
+@import "reset-css";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;500&display=swap");
+
+html {
+  font-family: Lato, sans-serif;
+}
+
+body {
+  background-color: #fcfcfc;
+}
