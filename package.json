@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1",
+    "sass": "^1.59.2"
   }
 }
