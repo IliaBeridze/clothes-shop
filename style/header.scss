@@ -10,8 +10,20 @@
   border: none;
   cursor: pointer;
 }
-
+.header-logo-wrap{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  position: relative;
+ 
+}
+.header-logo-icone {
+position: absolute;
+top: -6px;
+left: 4px;
+}
 .header-logo {
+  
   // position: relative;
   display: flex;
   align-items: center;
@@ -19,13 +31,7 @@
   
 }
 
-.header-logo-wrap{
-   
-  display: flex;
-  align-items: start;
-  flex-direction: column;
- 
-}
+
 
 .header-logo-text {
   font-size: 40px;
