@@ -1,5 +1,5 @@
 import "./style.scss";
-import "./size";
+import "./filter"
 import Card from "./card";
 
 const cards = document.querySelector(".cards");
@@ -13,6 +13,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 199,
     size: 36,
+    fit: "CLASSIC",
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFw53-E6Th5jalJduzZbeKpmNYdU2F7_6vA&usqp=CAU",
@@ -22,6 +23,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 169,
     size: 38,
+    fit: "REGULAR",
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyWesXONYQaVCjyPORaGhdIgTYfuPM2_DkHQ&usqp=CAU",
@@ -31,6 +33,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 179,
     size: 40,
+    fit: "REGULAR",
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-black-blouse-pants-suit-180508191.jpg",
@@ -40,6 +43,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 119,
     size: 36,
+    fit: "SLIM",
   },
   {
     img: "https://t3.ftcdn.net/jpg/03/41/03/46/360_F_341034617_4e96ntzBPpqjGxbUoHEVAp6NrH6KJwbE.jpg",
@@ -49,6 +53,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 139,
     size: 42,
+    fit: "CLASSIC",
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-white-blouse-pants-suit-180511785.jpg",
@@ -58,6 +63,7 @@ export const mockData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 159,
     size: 46,
+    fit: "TAILORED",
   },
 ];
 

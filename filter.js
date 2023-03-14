@@ -1,9 +1,5 @@
 import { mockData, renderItems } from "./main";
 
-import Card from "./card";
-
-const cards = document.querySelector(".cards");
-
 const btn = document.querySelectorAll(".size-btn");
 
 btn.forEach((e) => {
@@ -14,5 +10,13 @@ btn.forEach((e) => {
     renderItems(result);
   });
 });
+const btnFit = document.querySelectorAll(".style-btn");
 
-
+btnFit.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const result = mockData.filter((product) => {
+      return btn.textContent == product.fit;
+    });
+    renderItems(result);
+  });
+});
