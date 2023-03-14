@@ -1,11 +1,10 @@
 import "./style.scss";
-
+import "./size";
 import Card from "./card";
-
 
 const cards = document.querySelector(".cards");
 
-const mockData = [
+export const mockData = [
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA_djpm0QdOAgvKxQhB3EZuT6JPHn1FcSDaw&usqp=CAU",
     category: "Trousers",
@@ -13,6 +12,7 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 199,
+    size: 36,
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFw53-E6Th5jalJduzZbeKpmNYdU2F7_6vA&usqp=CAU",
@@ -21,6 +21,7 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 169,
+    size: 38,
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyWesXONYQaVCjyPORaGhdIgTYfuPM2_DkHQ&usqp=CAU",
@@ -29,6 +30,7 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 179,
+    size: 40,
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-black-blouse-pants-suit-180508191.jpg",
@@ -37,6 +39,7 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 119,
+    size: 36,
   },
   {
     img: "https://t3.ftcdn.net/jpg/03/41/03/46/360_F_341034617_4e96ntzBPpqjGxbUoHEVAp6NrH6KJwbE.jpg",
@@ -45,6 +48,7 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 139,
+    size: 42,
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-white-blouse-pants-suit-180511785.jpg",
@@ -53,16 +57,16 @@ const mockData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor nunc nibh, in posuere arcu malesuada.",
     price: 159,
+    size: 46,
   },
 ];
 
-
-
-function renderItems() {
-  mockData.forEach((item) => {
+export function renderItems(data) {
+  let result = "";
+  data.forEach((item) => {
     // console.log(item.img);
-    cards.innerHTML += Card(item);
-    
+    result += Card(item);
   });
+  cards.innerHTML = result;
 }
-renderItems();
+renderItems(mockData);
