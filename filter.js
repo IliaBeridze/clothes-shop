@@ -1,22 +1,42 @@
 import { mockData, renderItems } from "./main";
 
 const btn = document.querySelectorAll(".size-btn");
+const btnFit = document.querySelectorAll(".style-btn");
 
-btn.forEach((e) => {
-  e.addEventListener("click", () => {
-    const result = mockData.filter((product) => {
-      return e.textContent == product.size;
-    });
-    renderItems(result);
+const activeFilters = {};
+
+btn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    activeFilters["size"] = btn.textContent;
+    filter();
   });
 });
-const btnFit = document.querySelectorAll(".style-btn");
 
 btnFit.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const result = mockData.filter((product) => {
-      return btn.textContent == product.fit;
-    });
-    renderItems(result);
+    activeFilters["fit"] = btn.textContent;
+    filter();
   });
 });
+
+function filter() {
+  const result = mockData.filter((product) => {
+    console.log(activeFilters.size);
+    if (
+      activeFilters.hasOwnProperty("size") &&
+      activeFilters.size != product.size
+    ) {
+      return false;
+    }
+    if (
+      activeFilters.hasOwnProperty("fit") &&
+      activeFilters.fit != product.fit
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  renderItems(result);
+}
