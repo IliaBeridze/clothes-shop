@@ -1,0 +1,24 @@
+.style-fit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+  &-btn {
+    background-color: #fcfcfc;
+  }
+  margin-bottom: 30px;
+}
+.style-btn {
+  cursor: pointer;
+  background-color: #fcfcfc;
+  border: none;
+  padding: 7px 15px;
+  //&:hover {
+  //   background-color: #333333;
+  // }
+  
+}
+
+.style-btn:hover {
+  background-color: #333333;
+  color: #fcfcfc;
+}

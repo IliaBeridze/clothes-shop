@@ -1,0 +1,39 @@
+.by-color {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  
+}
+
+.color-specter {
+  cursor: pointer;
+  // border: 1px solid black;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.one-color {
+  background-color: #fff9f2;
+}
+.two-color {
+  background-color: #efefef;
+}
+.three-color {
+  background-color: #dfe6e9;
+}
+.fore-color {
+  background-color: #4d8888;
+}
+.five-color {
+  background-color: #a71a1b;
+}
+.six-color {
+  background-color: #0461a8;
+}
+.seven-color {
+  background-color: #636e72;
+}
+.eight-color {
+  background-color: #2d3436;
+}

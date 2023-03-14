@@ -1,0 +1,18 @@
+.size-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 7px;
+  column-gap: 14px;
+  margin-bottom: 25px;
+}
+
+.size-btn {
+  cursor: pointer;
+  padding: 5px 15px;
+  border: none;
+  background-color: #fcfcfc;
+  &:hover {
+    background-color: #333333;
+    color: #fcfcfc;
+  }
+}

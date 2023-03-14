@@ -1,29 +1,38 @@
-h1 {
+@import "filter-size.scss";
+@import "filter-price.scss";
+@import "filter-color.scss";
+@import "filter-style.scss";
+
+.bret-crams {
+  font-size: 17px;
+  font-family: Lato sans-serif;
+  font-weight: 300;
+  opacity: 0.65;
+  color: #333;
+  margin-bottom: 31px;
+  text-decoration: none;
+}
+.filter-header {
   font-size: 20px;
   font-family: Lora sans-serif;
+  margin-bottom: 16px;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 19px;
+  font-family:  sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: #333333;
+  letter-spacing: 0.32px;
 }
 .filter-card {
   height: 456px;
-
   margin-right: 95px;
-}
-.size-btns {
-  
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 7px;
-  column-gap: 14px;
-}
-
-.size-btn {
-  cursor: pointer;
-  padding: 5px 15px;
-  border: none;
-  background-color: #fcfcfc;
-  &:hover {
-    background-color: #333333;
-    color: #fcfcfc;
-  }
 }
 
 .price-range {
@@ -31,78 +40,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.input-range {
-  width: 100%;
-}
-
-.style-fit {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 11px;
-  &-btn {
-    background-color: #fcfcfc;
-  }
-}
-.style-btn {
-  cursor: pointer;
-  background-color: #fcfcfc;
-  border: none;
-  padding: 7px 15px;
-
-  //&:hover {
-  //   background-color: #333333;
-  // }
-}
-
-.style-btn:hover {
-  background-color: #333333;
-  color: #fcfcfc;
-}
-
-.by-color {
-display: grid;
-grid-template-columns: repeat(4,1fr);
-gap: 12px;
+  margin-bottom: 5px;
 }
 
 
-.color-specter {
-  cursor: pointer;
-  // border: 1px solid black;
-  width: 32px;
-  height: 32px;
-border-radius: 50%;
-}
 
-.one-color {
-  background-color: #FFF9F2;
-}
-.two-color {
-  background-color: #EFEFEF;
-}
-.three-color {
-  background-color: #DFE6E9;
-}
-.fore-color {
-  background-color: #4D8888;
-}
-.five-color {
-  background-color: #A71A1B;
-}
-.six-color {
-  background-color:#0461A8;
-}
-.seven-color {
-  background-color: #636E72;
-}
-.eight-color {
-  background-color: #2D3436;
-}
-
-h2 {
-  margin-top: 30px;
-  font-size: 19px;
-  color: #333333;
-  letter-spacing: 0.32px
-}
