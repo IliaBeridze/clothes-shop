@@ -44,13 +44,13 @@ const colors = document.querySelectorAll(".color-specter");
 
 colors.forEach((e) => {
   e.addEventListener("click", () => {
- 
+    console.log(priceRange.value);
     const result = mockData.filter((product) => {
       // console.log(product.color);
       // console.log(e.classList[1]);
-        
-      if (e.classList[1]==product.color) {
-     return product
+
+      if (e.classList[1] == product.color) {
+        return product;
       }
     });
     renderItems(result);
@@ -61,8 +61,24 @@ colors.forEach((e) => {
   // console.log('%cThis text is read');
 });
 
-
-const element = document.getElementById('myDiv');
+const element = document.getElementById("myDiv");
 const style = window.getComputedStyle(element);
-const backgroundColor = style.getPropertyValue('background-color')
-console.log(backgroundColor)
+const backgroundColor = style.getPropertyValue("background-color");
+console.log(backgroundColor);
+
+const priceRange = document.querySelector(".input-range");
+
+const range = document.querySelector(".range-price");
+priceRange.addEventListener("mousemove", () => {
+  range.innerHTML = priceRange.value + "$";
+});
+range.addEventListener("click", () => {
+  const result = mockData.filter((product) => {
+    if (product.price == priceRange.value) {
+      console.log(product.price);
+      console.log(priceRange.value);
+      return product;
+    }
+  });
+  renderItems(result)
+});
