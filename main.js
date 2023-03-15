@@ -14,6 +14,7 @@ export const mockData = [
     price: 199,
     size: 36,
     fit: "CLASSIC",
+    color: "#0461a8",
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPFw53-E6Th5jalJduzZbeKpmNYdU2F7_6vA&usqp=CAU",
@@ -24,6 +25,7 @@ export const mockData = [
     price: 169,
     size: 38,
     fit: "REGULAR",
+    color: "#fff9f2",
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyWesXONYQaVCjyPORaGhdIgTYfuPM2_DkHQ&usqp=CAU",
@@ -34,6 +36,7 @@ export const mockData = [
     price: 179,
     size: 40,
     fit: "REGULAR",
+    color: "#4d8888",
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-black-blouse-pants-suit-180508191.jpg",
@@ -44,6 +47,7 @@ export const mockData = [
     price: 119,
     size: 36,
     fit: "SLIM",
+    color: "#2d3436",
   },
   {
     img: "https://t3.ftcdn.net/jpg/03/41/03/46/360_F_341034617_4e96ntzBPpqjGxbUoHEVAp6NrH6KJwbE.jpg",
@@ -54,6 +58,7 @@ export const mockData = [
     price: 139,
     size: 42,
     fit: "CLASSIC",
+    color: "#efefef",
   },
   {
     img: "https://thumbs.dreamstime.com/b/beautiful-brunette-woman-natural-makeup-wear-fashion-clothes-casual-dress-code-office-style-total-white-blouse-pants-suit-180511785.jpg",
@@ -64,6 +69,7 @@ export const mockData = [
     price: 159,
     size: 46,
     fit: "TAILORED",
+    color: "#fff9f2",
   },
 ];
 
