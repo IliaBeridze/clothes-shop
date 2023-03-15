@@ -74,11 +74,9 @@ priceRange.addEventListener("mousemove", () => {
 });
 range.addEventListener("click", () => {
   const result = mockData.filter((product) => {
-    if (product.price == priceRange.value) {
-      console.log(product.price);
-      console.log(priceRange.value);
+    if (product.price <= priceRange.value) {
       return product;
     }
   });
-  renderItems(result)
+  renderItems(result);
 });
