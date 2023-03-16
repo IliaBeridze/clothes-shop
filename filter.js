@@ -66,7 +66,7 @@ colors.forEach((e) => {
 // const style = window.getComputedStyle(element);
 // const backgroundColor = style.getPropertyValue("background-color");
 // console.log(backgroundColor);
-
+const maxPrice = document.querySelector('.max-price')
 const priceRange = document.querySelector(".input-range");
 
 priceRange.addEventListener("input", () => {
@@ -75,5 +75,7 @@ priceRange.addEventListener("input", () => {
       return product;
     }
   });
+  maxPrice.innerHTML = priceRange.value + "$"
+  
   renderItems(result);
 });
