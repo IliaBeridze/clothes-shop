@@ -44,7 +44,7 @@ const colors = document.querySelectorAll(".color-specter");
 
 colors.forEach((e) => {
   e.addEventListener("click", () => {
-    console.log(e.dataset.color);
+    // console.log(e.dataset.color);
     // console.log(priceRange.value);
     const result = mockData.filter((product) => {
       // console.log(product.color);
@@ -81,3 +81,16 @@ range.addEventListener("click", () => {
   });
   renderItems(result);
 });
+
+const btnTest = document.querySelector(".test");
+
+
+btnTest.addEventListener('click',()=>{})
+
+  
+
+
+
+
+
+

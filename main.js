@@ -1,5 +1,5 @@
 import "./style.scss";
-import "./filter"
+import "./filter";
 import Card from "./card";
 
 const cards = document.querySelector(".cards");
@@ -82,3 +82,22 @@ export function renderItems(data) {
   cards.innerHTML = result;
 }
 renderItems(mockData);
+
+const minPriceElement = document.querySelector(".min-price");
+
+let minPrice = 0;
+
+const mapList = mockData.map((item) => {
+  return item.price;
+});
+minPrice = Math.min(...mapList);
+// console.log(minPrice);
+minPriceElement.textContent = minPrice + "$";
+
+const btnTest = document.querySelector(".test");
+
+var x = document.querySelector('.input-range').min = minPrice
+btnTest.addEventListener('click',()=>{
+console.log(x=minPriceElement);
+
+})
