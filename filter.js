@@ -44,12 +44,13 @@ const colors = document.querySelectorAll(".color-specter");
 
 colors.forEach((e) => {
   e.addEventListener("click", () => {
-    console.log(priceRange.value);
+    console.log(e.dataset.color);
+    // console.log(priceRange.value);
     const result = mockData.filter((product) => {
       // console.log(product.color);
       // console.log(e.classList[1]);
 
-      if (e.classList[1] == product.color) {
+      if (e.dataset.color == product.color) {
         return product;
       }
     });
@@ -61,10 +62,10 @@ colors.forEach((e) => {
   // console.log('%cThis text is read');
 });
 
-const element = document.getElementById("myDiv");
-const style = window.getComputedStyle(element);
-const backgroundColor = style.getPropertyValue("background-color");
-console.log(backgroundColor);
+// const element = document.getElementById("myDiv");
+// const style = window.getComputedStyle(element);
+// const backgroundColor = style.getPropertyValue("background-color");
+// console.log(backgroundColor);
 
 const priceRange = document.querySelector(".input-range");
 
