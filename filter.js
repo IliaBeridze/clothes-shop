@@ -1,5 +1,5 @@
 import { renderItems } from "./main";
-import mockData from "./mockData.json"
+import mockData from "./mockData.json";
 const btn = document.querySelectorAll(".size-btn");
 const btnFit = document.querySelectorAll(".style-btn");
 const colors = document.querySelectorAll(".color-specter");
@@ -38,6 +38,10 @@ const activeFilters = {};
 
 btn.forEach((btn) => {
   btn.addEventListener("click", () => {
+    document.querySelector(".size-btn.active")?.classList.remove("active");
+
+    btn.classList.add("active");
+
     activeFilters["size"] = btn.textContent;
     filter();
   });
@@ -45,6 +49,9 @@ btn.forEach((btn) => {
 
 btnFit.forEach((btn) => {
   btn.addEventListener("click", () => {
+    document.querySelector(".style-btn.active")?.classList.remove("active");
+    btn.classList.add("active");
+
     activeFilters["fit"] = btn.textContent;
     filter();
   });
@@ -87,5 +94,3 @@ function filter() {
 // const style = window.getComputedStyle(element);
 // const backgroundColor = style.getPropertyValue("background-color");
 // console.log(backgroundColor);
-
-

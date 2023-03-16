@@ -5,7 +5,7 @@ import Card from "./card";
 
 const cards = document.querySelector(".cards");
 
-console.log(mockData);
+
 
 export function renderItems(data) {
   let result = "";
