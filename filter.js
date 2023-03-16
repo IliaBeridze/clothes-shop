@@ -1,5 +1,5 @@
-import { mockData, renderItems } from "./main";
-
+import { renderItems } from "./main";
+import mockData from "./mockData.json"
 const btn = document.querySelectorAll(".size-btn");
 const btnFit = document.querySelectorAll(".style-btn");
 const colors = document.querySelectorAll(".color-specter");
@@ -88,6 +88,4 @@ function filter() {
 // const backgroundColor = style.getPropertyValue("background-color");
 // console.log(backgroundColor);
 
-const minPriceElement = document.querySelector(".min-price");
 
-console.log(minPriceElement);
