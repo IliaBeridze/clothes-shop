@@ -69,11 +69,7 @@ colors.forEach((e) => {
 
 const priceRange = document.querySelector(".input-range");
 
-const range = document.querySelector(".range-price");
-priceRange.addEventListener("mousemove", () => {
-  range.innerHTML = priceRange.value + "$";
-});
-range.addEventListener("click", () => {
+priceRange.addEventListener("input", () => {
   const result = mockData.filter((product) => {
     if (product.price <= priceRange.value) {
       return product;
@@ -81,16 +77,3 @@ range.addEventListener("click", () => {
   });
   renderItems(result);
 });
-
-const btnTest = document.querySelector(".test");
-
-
-btnTest.addEventListener('click',()=>{})
-
-  
-
-
-
-
-
-

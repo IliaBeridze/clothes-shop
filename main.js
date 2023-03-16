@@ -85,19 +85,24 @@ renderItems(mockData);
 
 const minPriceElement = document.querySelector(".min-price");
 
+const maxPriceElement = document.querySelector(".max-price");
+
 let minPrice = 0;
+
+let maxPrice = 0;
 
 const mapList = mockData.map((item) => {
   return item.price;
 });
 minPrice = Math.min(...mapList);
-// console.log(minPrice);
+
+maxPrice = Math.max(...mapList);
+
 minPriceElement.textContent = minPrice + "$";
 
-const btnTest = document.querySelector(".test");
+maxPriceElement.textContent = maxPrice + "$";
 
-var x = document.querySelector('.input-range').min = minPrice
-btnTest.addEventListener('click',()=>{
-console.log(x=minPriceElement);
-
-})
+var inputRangeMinValue = (document.querySelector(".input-range").min =
+  minPrice);
+var inputRangeMaxValue = (document.querySelector(".input-range").max =
+  maxPrice);
