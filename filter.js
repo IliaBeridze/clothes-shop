@@ -7,6 +7,15 @@ const colors = document.querySelectorAll(".color-specter");
 const maxPrice = document.querySelector(".max-price");
 const priceRange = document.querySelector(".input-range");
 
+const searchInput = document.querySelector(".search-input");
+
+const searchBtn = document.querySelector(".search-btn")
+
+searchBtn.addEventListener('click',()=>{
+  activeFilters["type"] = searchInput.value
+  filter()
+})
+
 priceRange.addEventListener("input", () => {
   activeFilters["price"] = priceRange.value;
   // const result = mockData.filter((product) => {
@@ -14,10 +23,9 @@ priceRange.addEventListener("input", () => {
   //     return product;
   //   }
   // });
-
+  // renderItems(result);
   maxPrice.innerHTML = priceRange.value + "$";
 
-  // renderItems(result);
   filter();
 });
 
@@ -78,6 +86,12 @@ function filter() {
       return false;
     }
     if (
+      activeFilters.hasOwnProperty("color") &&
+      activeFilters.type != searchInput.value
+    ) {
+      return false;
+    }
+    if (
       activeFilters.hasOwnProperty("price") &&
       activeFilters.price < product.price
     ) {
@@ -100,8 +114,3 @@ resetFilter.addEventListener("click", () => {
     btn.classList.remove("active");
   });
 });
-
-// const element = document.getElementById("myDiv");
-// const style = window.getComputedStyle(element);
-// const backgroundColor = style.getPropertyValue("background-color");
-// console.log(backgroundColor);

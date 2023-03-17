@@ -3,6 +3,21 @@
 @import "filter-color.scss";
 @import "filter-style.scss";
 
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-input{
+  padding: 5px;
+border: #fcfcfc;
+}
+
+.search-btn{
+  border: none;
+  background-color: #fcfcfc;
+}
+
 .bret-crams {
   font-size: 17px;
   font-family: Lato sans-serif;
