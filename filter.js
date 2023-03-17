@@ -1,20 +1,30 @@
 import { renderItems } from "./main";
 import mockData from "./mockData.json";
+
 const btn = document.querySelectorAll(".size-btn");
+
 const btnFit = document.querySelectorAll(".style-btn");
+
 const colors = document.querySelectorAll(".color-specter");
 
 const maxPrice = document.querySelector(".max-price");
+
 const priceRange = document.querySelector(".input-range");
 
 const searchInput = document.querySelector(".search-input");
 
-const searchBtn = document.querySelector(".search-btn")
+const searchBtn = document.querySelector(".search-btn");
 
-searchBtn.addEventListener('click',()=>{
-  activeFilters["type"] = searchInput.value
-  filter()
-})
+searchBtn.addEventListener("click", () => {
+  // const result = mockData.filter((product) => {
+  //   if (product.type == searchInput.value) {
+  //     return product;
+  //   }
+  // });
+  // renderItems(result);
+  activeFilters["type"] = searchInput.value;
+  filter();
+});
 
 priceRange.addEventListener("input", () => {
   activeFilters["price"] = priceRange.value;
@@ -32,12 +42,6 @@ priceRange.addEventListener("input", () => {
 colors.forEach((btn) => {
   btn.addEventListener("click", () => {
     activeFilters["color"] = btn.dataset.color;
-    // const result = mockData.filter((product) => {
-    //   if (btn.dataset.color == product.color) {
-    //     return product;
-    //   }
-    // });
-    // renderItems(result);
     filter();
   });
 });

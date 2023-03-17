@@ -3,42 +3,34 @@
   align-items: center;
   justify-content: space-between;
   height: 110px;
-
 }
 .burger-menu {
   background-color: #fcfcfc;
   border: none;
   cursor: pointer;
 }
-.header-logo-wrap{
+.header-logo-wrap {
   display: flex;
   align-items: start;
   flex-direction: column;
   position: relative;
- 
 }
 .header-logo-icone {
-position: absolute;
-top: -6px;
-left: 4px;
+  position: absolute;
+  top: -6px;
+  left: 4px;
 }
 .header-logo {
-  
-  // position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 }
-
-
 
 .header-logo-text {
   font-size: 40px;
-  font-weight:normal;
+  font-weight: normal;
   font-family: Lora;
   color: #000;
-
 }
 
 .header-logo-label {
@@ -46,11 +38,7 @@ left: 4px;
   font-family: Lato;
   font-weight: normal;
   color: #000;
-
-
 }
-
-
 
 .actions-wrapper {
   display: flex;
