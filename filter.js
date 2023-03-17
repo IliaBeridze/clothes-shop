@@ -90,6 +90,17 @@ function filter() {
   renderItems(result);
 }
 
+const resetFilter = document.querySelector(".reset-filter");
+resetFilter.addEventListener("click", () => {
+  renderItems(mockData);
+  btnFit.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+  btn.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+});
+
 // const element = document.getElementById("myDiv");
 // const style = window.getComputedStyle(element);
 // const backgroundColor = style.getPropertyValue("background-color");
