@@ -17,12 +17,12 @@ const searchBtn = document.querySelector(".search-btn");
 
 searchBtn.addEventListener("click", () => {
   // const result = mockData.filter((product) => {
-  //   if (product.type == searchInput.value) {
+  //   if (product.category == searchInput.value) {
   //     return product;
   //   }
   // });
   // renderItems(result);
-  activeFilters["type"] = searchInput.value;
+  activeFilters["category"] = searchInput.value;
   filter();
 });
 
@@ -91,7 +91,7 @@ function filter() {
     }
     if (
       activeFilters.hasOwnProperty("color") &&
-      activeFilters.type != searchInput.value
+      activeFilters.category != searchInput.value
     ) {
       return false;
     }
@@ -110,11 +110,12 @@ function filter() {
 
 const resetFilter = document.querySelector(".reset-filter");
 resetFilter.addEventListener("click", () => {
-  renderItems(mockData);
+  
   btnFit.forEach((btn) => {
     btn.classList.remove("active");
   });
   btn.forEach((btn) => {
     btn.classList.remove("active");
   });
+  renderItems(mockData);
 });
