@@ -89,7 +89,7 @@ function filter() {
     }
     if (
       activeFilters.hasOwnProperty("title") &&
-      !product.title.toLowerCase().startsWith(activeFilters.title)
+      !product.title.toLowerCase().startsWith(activeFilters.title.toLowerCase())
     ) {
       return false;
     }
