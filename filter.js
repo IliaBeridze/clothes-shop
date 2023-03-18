@@ -13,30 +13,28 @@ const priceRange = document.querySelector(".input-range");
 
 const searchInput = document.querySelector(".search-input");
 
-const searchBtn = document.querySelector(".search-btn");
-
-searchBtn.addEventListener("click", () => {
+searchInput.addEventListener("input", () => {
   // const result = mockData.filter((product) => {
   //   if (product.category == searchInput.value) {
   //     return product;
   //   }
   // });
   // renderItems(result);
-  activeFilters["category"] = searchInput.value;
+  activeFilters["title"] = searchInput.value;
   filter();
 });
 
 priceRange.addEventListener("input", () => {
-  activeFilters["price"] = priceRange.value;
-  // const result = mockData.filter((product) => {
-  //   if (product.price <= priceRange.value) {
-  //     return product;
-  //   }
-  // });
-  // renderItems(result);
-  maxPrice.innerHTML = priceRange.value + "$";
+  // activeFilters["price"] = priceRange.value;
+  const result = mockData.filter((product) => {
+    if (product.price <= priceRange.value) {
+      return product;
+    }
+  });
+  renderItems(result);
+  // maxPrice.innerHTML = priceRange.value + "$";
 
-  filter();
+  // filter();
 });
 
 colors.forEach((btn) => {
@@ -46,7 +44,7 @@ colors.forEach((btn) => {
   });
 });
 
-const activeFilters = {};
+let activeFilters = {};
 
 btn.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -90,8 +88,8 @@ function filter() {
       return false;
     }
     if (
-      activeFilters.hasOwnProperty("color") &&
-      activeFilters.category != searchInput.value
+      activeFilters.hasOwnProperty("title") &&
+      !product.title.toLowerCase().startsWith(activeFilters.title)
     ) {
       return false;
     }
@@ -104,18 +102,18 @@ function filter() {
 
     return true;
   });
-
+  console.log(activeFilters, "activeFilters");
   renderItems(result);
 }
 
 const resetFilter = document.querySelector(".reset-filter");
 resetFilter.addEventListener("click", () => {
-  
   btnFit.forEach((btn) => {
     btn.classList.remove("active");
   });
   btn.forEach((btn) => {
     btn.classList.remove("active");
   });
+  activeFilters = {};
   renderItems(mockData);
 });
