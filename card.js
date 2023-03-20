@@ -4,6 +4,10 @@ export default function ShopItem(props) {
     class="card-img"
     src="${props.img}"
   />
+  <img
+    class="card-imgAdd"
+    src="${props.imgAdd}"
+  />
 
   <div class="card-info">
     <div class="card-category">${props.category}</div>
@@ -16,4 +20,3 @@ export default function ShopItem(props) {
   </div>
 </div>`;
 }
- 

@@ -8,11 +8,20 @@
   width: 270px;
   height: 470px;
   background-color: #fff;
+  position: relative;
 
   &-img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+  }
+  &-imgAdd {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    opacity: 0;
   }
 
   &-info {
@@ -59,7 +68,9 @@
   }
 
   &:hover {
-    // border: 2px solid black;
-    
+    .card-imgAdd {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 }

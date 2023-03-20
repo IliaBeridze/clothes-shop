@@ -1,11 +1,10 @@
 import mockData from "./mockData.json";
 import "./style.scss";
 import "./filter";
+import "./header";
 import Card from "./card";
 
 const cards = document.querySelector(".cards");
-
-
 
 export function renderItems(data) {
   let result = "";
