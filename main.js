@@ -39,3 +39,24 @@ var inputRangeMinValue = (document.querySelector(".input-range").min =
   minPrice);
 var inputRangeMaxValue = (document.querySelector(".input-range").max =
   maxPrice);
+
+const mapBag = mockData.map((item) => {
+  return item.imgAdd;
+});
+
+mapBag.forEach((product) => {
+  console.log(product.imgAdd);
+  product.imgAdd.addEventListener("click", () => {
+    console.log("bla");
+  });
+});
+
+const countItems = document.querySelector(".add-to-bag");
+let counter = 0;
+
+cards.addEventListener("click", renderCount);
+
+function renderCount() {
+  counter++;
+  countItems.innerHTML = `(${counter})`;
+}
