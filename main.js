@@ -1,7 +1,6 @@
 import mockData from "./mockData.json";
 import "./style.scss";
 import "./filter";
-import "./header";
 import Card from "./card";
 
 const cards = document.querySelector(".cards");
@@ -13,6 +12,13 @@ export function renderItems(data) {
     result += Card(item);
   });
   cards.innerHTML = result;
+
+  document.querySelectorAll(".card-imgAdd").forEach((item) => {
+    item.addEventListener("click",()=>{
+     countItems.innerHTML=`(${renderCount()})`
+      console.log("test");
+    });
+  });
 }
 renderItems(mockData);
 
@@ -40,23 +46,9 @@ var inputRangeMinValue = (document.querySelector(".input-range").min =
 var inputRangeMaxValue = (document.querySelector(".input-range").max =
   maxPrice);
 
-const mapBag = mockData.map((item) => {
-  return item.imgAdd;
-});
-
-mapBag.forEach((product) => {
-  console.log(product.imgAdd);
-  product.imgAdd.addEventListener("click", () => {
-    console.log("bla");
-  });
-});
-
 const countItems = document.querySelector(".add-to-bag");
-let counter = 0;
 
-cards.addEventListener("click", renderCount);
 
 function renderCount() {
-  counter++;
-  countItems.innerHTML = `(${counter})`;
+  return +countItems.textContent.slice(1,length-1) + 1;
 }
