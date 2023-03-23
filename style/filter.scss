@@ -2,7 +2,10 @@
 @import "filter-price.scss";
 @import "filter-color.scss";
 @import "filter-style.scss";
-
+.aside {
+  position: fixed;
+  margin-top: 100px;
+}
 .search-input {
   font-size: 18px;
   font-family: sans-serif;
