@@ -14,8 +14,8 @@ export function renderItems(data) {
   cards.innerHTML = result;
 
   document.querySelectorAll(".card-imgAdd").forEach((item) => {
-    item.addEventListener("click",()=>{
-     countItems.innerHTML=`(${renderCount()})`
+    item.addEventListener("click", () => {
+      countItems.innerHTML = `(${renderCount()})`;
       console.log("test");
     });
   });
@@ -48,7 +48,6 @@ var inputRangeMaxValue = (document.querySelector(".input-range").max =
 
 const countItems = document.querySelector(".add-to-bag");
 
-
 function renderCount() {
-  return +countItems.textContent.slice(1,length-1) + 1;
+  return +countItems.textContent.slice(1, length - 1) + 1;
 }
