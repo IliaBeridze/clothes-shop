@@ -5,18 +5,24 @@ import Card from "./card";
 
 const cards = document.querySelector(".cards");
 
-export function renderItems(data) {
+export function renderItems(data, append = false) {
   let result = "";
+
   data.forEach((item) => {
-    // console.log(item.img);
     result += Card(item);
   });
-  cards.innerHTML = result;
+
+  // cards.append(result);
+  if (append) {
+    cards.innerHTML += result;
+  }else {
+    cards.innerHTML = result
+  }
+  
 
   document.querySelectorAll(".card-imgAdd").forEach((item) => {
     item.addEventListener("click", () => {
       countItems.innerHTML = `(${renderCount()})`;
-      console.log("test");
     });
   });
 }
@@ -51,3 +57,20 @@ const countItems = document.querySelector(".add-to-bag");
 function renderCount() {
   return +countItems.textContent.slice(1, length - 1) + 1;
 }
+
+window.addEventListener("scroll", () => {
+  if (
+    window.scrollY >=
+    document.documentElement.scrollHeight - window.innerHeight
+  ) {
+    // mockData.push(...mockData.slice(1, 5));
+    console.log("hhh");
+
+    renderItems(mockData.slice(1, 5), true);
+  }
+});
+document.documentElement.scrollHeight - window.innerHeight;
+console.log(window.scrollY);
+console.log(window.innerHeight);
+console.log(document.documentElement.scrollHeight);
+console.log(document.documentElement.scrollHeight - window.innerHeight);
