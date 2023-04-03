@@ -12,7 +12,6 @@ export function renderItems(data, append = false) {
     result += Card(item);
   });
 
-  // cards.append(result);
   if (append) {
     cards.innerHTML += result;
   }else {
@@ -64,13 +63,8 @@ window.addEventListener("scroll", () => {
     document.documentElement.scrollHeight - window.innerHeight
   ) {
     // mockData.push(...mockData.slice(1, 5));
-    console.log("hhh");
+    // console.log(mockData);
 
     renderItems(mockData.slice(1, 5), true);
   }
 });
-document.documentElement.scrollHeight - window.innerHeight;
-console.log(window.scrollY);
-console.log(window.innerHeight);
-console.log(document.documentElement.scrollHeight);
-console.log(document.documentElement.scrollHeight - window.innerHeight);

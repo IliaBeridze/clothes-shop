@@ -2,9 +2,8 @@
 @import "filter-price.scss";
 @import "filter-color.scss";
 @import "filter-style.scss";
-.aside {
+.filter-section {
   position: fixed;
-  margin-top: 100px;
 }
 .search-input {
   font-size: 18px;
@@ -71,6 +70,7 @@
   background-color: #fcfcfc;
   font-size: 20px;
   font-weight: 100;
+  
   &:hover {
     background-color: #333;
     color: #fcfcfc;
