@@ -2,21 +2,16 @@
 @import "filter-price.scss";
 @import "filter-color.scss";
 @import "filter-style.scss";
-.filter-section {
-  position: fixed;
+.aside {
+position: fixed;
+top: 100px;
 }
-.search-input {
-  font-size: 18px;
-  font-family: sans-serif;
-  font-weight: 300;
-  padding: 5px;
-  border: 1px solid #333;
-  margin-bottom: 31px;
+
+.breadcrumbs-wrapper {
+ 
+  margin-bottom: 10px;
 }
-.bret-crams-wrapper {
-  margin-bottom: 20px;
-}
-.bret-crams {
+.breadcrumbs {
   font-size: 17px;
   font-family: Lato sans-serif;
   font-weight: 300;
@@ -29,7 +24,14 @@
   font-family: Lora sans-serif;
   margin-bottom: 16px;
 }
-
+.search-input {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px solid #333;
+  margin-bottom: 31px;
+}
 .filter-label {
   display: block;
   margin-bottom: 12px;
@@ -41,10 +43,6 @@
   opacity: 1;
   color: #333333;
   letter-spacing: 0.32px;
-}
-.filter-card {
-  height: 456px;
-  margin-right: 95px;
 }
 
 .price-range {
